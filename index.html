@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Greeting</title>
+  </head>
+  <body>
+    <script>
+      function formatName(firstName, lastName) {
+        const fullName = `${firstName} ${lastName}`;
+        return fullName;
+      }
+
+      function getGreeting(timeOfDay) {
+        return `God ${timeOfDay}`;
+      }
+
+      function createGreeting(firstName, lastName, timeOfDay) {
+        const name = formatName(firstName, lastName);
+        const time = getGreeting(timeOfDay);
+        return time + ", " + name;
+      }
+      console.log(createGreeting("John", "Doe", "morning"));
+      console.log(createGreeting("Ava", "Lee", "night"));
+      console.log(createGreeting("seann", " ", "evening"));
+    </script>
+  </body>
+</html>
